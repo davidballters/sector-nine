@@ -1,10 +1,92 @@
+@import"reset";
+@import"variables";
+@import"mixins";
+@import"utils";
+@import"fonts";
+
+
+
 body {
-    background-color:#0B1D26;
+
+    font-family: $font-primary;
+    background-color: #0B1D26;
 }
+
 .container {
 
-    header{
-        disply
+    background: url(../assets/imgs/MG-hero.png);
+    background-size: cover;
+
+    .banner {
+
+        header {
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 64px;
+                margin-left: 59px;
+                margin-right: 59px;
+
+                .logo {
+                    width: 102px;
+                    height: 39px;
+                }
+
+                ul {
+                    display: flex;
+
+                    li>a {
+                        text-decoration: none;
+                        color: $black;
+                        margin-left: 48px;
+                        margin-top: 69px;
+                        font-weight: 700;
+                        font-size: 18px;
+                        margin-right: 39px;
+                        line-height: 27px;
+                    }
+                }
+            }
+        }
+
+        &__half {
+
+            display: flex;
+            .icon {
+
+                width: 24px;
+                height: 68px;
+                gap: 20px;
+                margin-top: 102px;
+                margin-left: 59px;
+                margin-right: 398px;
+                display: flex;
+                flex-direction: column;
+
+
+            }
+
+            h1 {
+
+                width: 950px;
+                height: 500px;
+                margin-top: 234px;
+                font-family: $font-primary;
+                font-size: 88px;
+
+            }
+
+
+        }
+
+
 
     }
+
+
+
+
+
 }
