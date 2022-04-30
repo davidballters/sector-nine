@@ -1,4 +1,4 @@
-$font-primary: 'Poppins';
+$font-primary: 'Poppins', sans-serif;
 
 $black: black;
 $darkBlue: #0B1D26;
@@ -20,7 +20,9 @@ $col-md: 720px; // (max-width: 720px)
 $col-lg: 960px; // (max-width: 960px)
 $col-xl: 1140px; // (max-width: 1140px)
 
-$breakpoints: (sm: $sm,
+$breakpoints: (
+    sm: $sm,
     md: $md,
     lg: $lg,
-    xl: $xl);
+    xl: $xl,
+);

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 html,
 body,
 div,
@@ -131,38 +132,8 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "Poppins";
-  src: url(../assets/fonts/Poppins-Regular.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url(../assets/fonts/Poppins-Medium.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url(../assets/fonts/Poppins-Light.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url(../assets/fonts/Poppins-Bold.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url(../assets/fonts/Poppins-Black.ttf) format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   background-color: #0B1D26;
 }
 
@@ -188,54 +159,121 @@ body {
 .container .banner header nav ul li > a {
   text-decoration: none;
   color: black;
-  margin-left: 48px;
-  margin-top: 69px;
+  margin: 24px;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  margin-right: 39px;
   line-height: 27px;
-}
-.container .banner header .icon {
-  display: block;
-}
-.container .banner header .icon ul {
-  margin-top: 120px;
-  margin-left: 59px;
-  gap: 20px;
-}
-.container .banner header .icon ul li {
-  gap: 20px;
-  display: block;
-}
-.container .banner header .icon ul li a {
-  margin-top: 20px;
 }
 .container .banner__half {
   display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  margin-bottom: 466px;
+}
+.container .banner__half .icon {
+  margin-top: 102px;
+}
+.container .banner__half .icon a {
+  display: block;
+  margin-bottom: 20px;
 }
 .container .banner__half h1 {
-  height: 500px;
-  margin-left: 398px;
-  margin-right: 312px;
-  display: block;
-  font-family: "Poppins";
-  font-size: 88px;
+  margin-top: 139px;
+  line-height: 70px;
+  margin-left: 64px;
+  font-family: "Poppins", sans-serif;
+  font-size: 80px;
 }
 .container .banner__half .slider {
-  display: block;
+  margin-top: 125px;
 }
 .container .banner__half .slider ul {
-  display: block;
+  text-align: right;
 }
 .container .banner__half .slider ul li {
   margin-bottom: 40px;
-  margin-left: 50px;
 }
 .container .banner__half .slider ul li a {
-  gap: 20px;
-  margin-top: 20px;
   color: black;
+  font-family: "Poppins", sans-serif;
+  line-height: 27px;
+  font-weight: 700;
   text-decoration: none;
+}
+.container main {
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+}
+.container main span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 240px;
+  color: white;
+  opacity: 0.1;
+}
+.container main h1 {
+  font-family: "Poppins", sans-serif;
+  color: whitesmoke;
+  font-size: 64px;
+  font-weight: 600;
+}
+.container main p {
+  align-self: center;
+  font-family: "Poppins", sans-serif;
+  color: whitesmoke;
+  font-size: 18px;
+  line-height: 32px;
+  position: relative;
+}
+.container main .cruiser__card {
+  display: flex;
+}
+.container main .cruiser__card .logo-one {
+  width: 566px;
+  height: 720px;
+}
+.container main .carving {
+  display: flex;
+}
+.container main .carving__card .logo-two {
+  width: 566px;
+  height: 720px;
+}
+
+footer .content {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .content h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: white;
+  margin-bottom: 20px;
+}
+footer .content ul li > a {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 18px;
+  line-height: 32px;
+  list-style: none;
+  text-decoration: none;
+}
+footer .content__sector {
+  display: flex;
+  flex-direction: column;
+}
+footer .content__sector .logo {
+  width: 102px;
+  height: 39px;
+  margin-bottom: 25px;
+}
+footer .content__sector span {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
