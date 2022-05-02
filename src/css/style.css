@@ -132,16 +132,126 @@ table {
   border-spacing: 0;
 }
 
+.container, .contenedor-principal main .section {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 600px) {
+  .container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+    width: 100%;
+    max-width: 570px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+    width: 100%;
+    max-width: 860px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+    width: 100%;
+    max-width: 1150px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+    width: 100%;
+    max-width: 1400px;
+  }
+}
+
+.container-sm {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  .container-sm {
+    max-width: 570px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .container-sm {
+    max-width: 860px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container-sm {
+    max-width: 1150px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .container-sm {
+    max-width: 1400px;
+  }
+}
+
+.container-md {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .container-md {
+    max-width: 860px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container-md {
+    max-width: 1150px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .container-md {
+    max-width: 1400px;
+  }
+}
+
+.container-lg {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .container-lg {
+    max-width: 1150px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .container-lg {
+    max-width: 1400px;
+  }
+}
+
+.container-xl {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+@media only screen and (min-width: 1800px) {
+  .container-xl {
+    max-width: 1400px;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #0B1D26;
 }
 
-.container {
+.contenedor-principal {
   background: url(../assets/imgs/MG-hero.png);
   background-size: cover;
 }
-.container .banner header nav {
+.contenedor-principal .banner header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,14 +259,14 @@ body {
   margin-left: 59px;
   margin-right: 59px;
 }
-.container .banner header nav .logo {
+.contenedor-principal .banner header nav .logo {
   width: 102px;
   height: 39px;
 }
-.container .banner header nav ul {
+.contenedor-principal .banner header nav ul {
   display: flex;
 }
-.container .banner header nav ul li > a {
+.contenedor-principal .banner header nav ul li > a {
   text-decoration: none;
   color: black;
   margin: 24px;
@@ -165,59 +275,63 @@ body {
   font-size: 18px;
   line-height: 27px;
 }
-.container .banner__half {
+.contenedor-principal .banner__half {
   display: flex;
   justify-content: space-between;
   padding: 0 60px;
   margin-bottom: 466px;
 }
-.container .banner__half .icon {
+.contenedor-principal .banner__half .icon {
   margin-top: 102px;
 }
-.container .banner__half .icon a {
+.contenedor-principal .banner__half .icon a {
   display: block;
   margin-bottom: 20px;
 }
-.container .banner__half h1 {
+.contenedor-principal .banner__half h1 {
   margin-top: 139px;
   line-height: 70px;
   margin-left: 64px;
   font-family: "Poppins", sans-serif;
   font-size: 80px;
 }
-.container .banner__half .slider {
+.contenedor-principal .banner__half .slider {
   margin-top: 125px;
 }
-.container .banner__half .slider ul {
+.contenedor-principal .banner__half .slider ul {
   text-align: right;
 }
-.container .banner__half .slider ul li {
+.contenedor-principal .banner__half .slider ul li {
   margin-bottom: 40px;
 }
-.container .banner__half .slider ul li a {
+.contenedor-principal .banner__half .slider ul li a {
   color: black;
   font-family: "Poppins", sans-serif;
   line-height: 27px;
   font-weight: 700;
   text-decoration: none;
 }
-.container main {
+.contenedor-principal main {
   background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
 }
-.container main span {
+.contenedor-principal main span {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 240px;
   color: white;
   opacity: 0.1;
 }
-.container main h1 {
+.contenedor-principal main h1, .contenedor-principal main p {
+  margin-bottom: 27px;
+}
+.contenedor-principal main h1 {
   font-family: "Poppins", sans-serif;
   color: whitesmoke;
   font-size: 64px;
   font-weight: 600;
+  line-height: 96px;
 }
-.container main p {
+.contenedor-principal main p {
   align-self: center;
   font-family: "Poppins", sans-serif;
   color: whitesmoke;
@@ -225,17 +339,49 @@ body {
   line-height: 32px;
   position: relative;
 }
-.container main .cruiser__card {
+.contenedor-principal main a {
+  color: #FDD130;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+.contenedor-principal main .cruiser__card {
   display: flex;
 }
-.container main .cruiser__card .logo-one {
+.contenedor-principal main .cruiser__card .logo-one {
   width: 566px;
   height: 720px;
 }
-.container main .carving {
+.contenedor-principal main .carving {
   display: flex;
 }
-.container main .carving__card .logo-two {
+.contenedor-principal main .carving__card .logo-two {
+  width: 566px;
+  height: 720px;
+}
+.contenedor-principal main .section {
+  display: flex;
+}
+.contenedor-principal main .section .content {
+  padding: 0 75px 0 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedor-principal main .section .content h1 {
+  position: relative;
+}
+.contenedor-principal main .section .content h1::before {
+  content: "01";
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  font-weight: bold;
+  font-size: 240px;
+  color: white;
+  opacity: 0.1;
+  top: -33%;
+  left: -16%;
+}
+.contenedor-principal main .section .image {
   width: 566px;
   height: 720px;
 }
