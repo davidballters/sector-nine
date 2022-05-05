@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="[nombreCarpetaFontAwesome]/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Sector9</title>
 </head>
@@ -13,10 +12,7 @@
 <body>
 
     <div class="contenedor-principal">
-        <!--
-            la clase container es una clase de utilidad, https://getbootstrap.com/docs/5.0/layout/containers/
-            este concepto de contenedor no solo es usado por bootstrap, es algo asi como un estandar general en css
-        -->
+
         <section class="banner">
 
             <header>
@@ -75,121 +71,75 @@
                     </ul>
                 </div>
             </div>
-
-
         </section>
 
         <main>
-            <section class="cruiser">
-                <div class="cruiser__card">
-                    <span>01</span>
-                    <h1>CRUISER</h1>
+
+            <section class="container" id="container">
+                <div class="card">
+                    <h2 class="card__title">CRUISER </h2>
                     <p>
-                        Si bien la mayoría de las tablas de nuestra línea son capaces de navegar, una tabla designada
-                        como
-                        crucero suele ser un
-                        poco más corta que una tabla corta estándar con una punta más corta, una forma más direccional y
-                        ruedas suaves. La
+                        Si bien la mayoría de las tablas de nuestra línea son capaces de navegar, una tabla
+                        designada como crucero suele ser un
+                        poco más corta que una tabla corta estándar con una punta más corta, una forma más
+                        direccional y ruedas suaves. La
                         mayoría de estas tablas se construyen a partir de moldes regulares de tablas cortas y son
-                        capaces de
-                        patinar en una
+                        capaces de patinar en una
                         variedad de terrenos, incluidos parques, pero también pueden cruzar un paseo marítimo.
                     </p>
-                    <img class="logo-one" src="./assets/imgs/01.png" alt="">
-                    <a href="#">leer mas</a>
+                    <a href="#">Leer más</a>
+
+                    <div class="card__img">
+                        <img src="./assets/imgs/01.png" alt="imagen cruiser">
+                    </div>
+
                 </div>
+
+                <div class="carving">
+                    <img class="carving__img" src="./assets/imgs/02.png" alt="imagen carving">
+                    <div class="carving__card">
+                        <h2 class="title">CARVING</h2>
+                        <p>
+                            Si le gustan las tablas que mantienen bien su línea en los giros y no se deslizan mucho,
+                            esté atento a esta designación.
+                            Eso no significa que no se deslizarán en absoluto, sino que, por lo general, están
+                            configurados con ruedas con bordes
+                            que se agarran mejor mientras mantienen la velocidad. Todos nuestros modelos completos con
+                            ejes Gullwing Sidewinder II
+                            se consideran tablas de Carving, pero este estilo de conducción tampoco es exclusivo de
+                            ellos.
+                        </p>
+                        <a href="#">leer mas</a>
+                    </div>
+                </div>
+
+                <div class="downhill">
+                    <div class="card">
+                        <h2 class="card__title">DOWNHILL</h2>
+                        <p>
+                            Las tablas con la designación Downhill están diseñadas para bajar por grandes colinas o
+                            pasos
+                            de montaña. Esto no
+                            significa que tenga una licencia automática para cargar por estas colinas, sino que la tabla
+                            puede manejarlo si tiene la
+                            capacidad. Las tablas de descenso suelen tener moldes más complejos, construcciones únicas y
+                            hardware y componentes de
+                            primera calidad. Siempre patine dentro de sus propias capacidades y use un casco.
+                        </p>
+                        <a href="#">Leer más</a>
+
+                        <div class="card__img">
+                            <img src="./assets/imgs/03.png" alt="imagen cruiser">
+                        </div>
+
+                    </div>
             </section>
 
-            <section class="section cruiser">
-                <!-- ENTIENDAME PARA ELIMINARME -->
-                <!-- ESTO NO ES UN CARD ES UN ESTILO DE SECCION QUE REPITE EN CADA SECCION DE LA PAGINA NADA MAS -->
-                <div class="content">
-                    <!-- 
-                        <span>01</span>
-                        ESTO ES LO DEBIA CONTENER EL PSEUDO ELEMENTO NO UN ELEMENTO DE HTML
-
-                        Ejemplo: 
-                            .selector-x::after {
-                                ...otros estilos,
-                                content: "01"; // el contenido del pseudo elemento
-                            }
-
-                        Mire https://www.youtube.com/watch?v=wHY02FpNYnU
-                    -->
-                    <h1>CRUISER</h1>
-                    <!--
-                        ESPACIO REQUERIDO PARA SEPARAR ELEMENTOS SOLO 1 LINEA Y SOLO SI VOY A 
-                        ESCRIBIR OTRO ELEMENTO HTML SINO NO PONGA MAS SEPARACION
-                    -->
-                    <p>
-                        <!--
-                            El navegador no lee los saltos de linea en una etiqueta de texto, el texto se ajusta es al tamaño
-                            entonces haga que esto sea leible para otras persona que lea su codigo
-                        -->
-                        Si bien la mayoría de las tablas de nuestra línea son capaces de navegar, una tabla designada
-                        como crucero suele ser un poco más corta que una tabla corta estándar con una punta más corta,
-                        una forma más direccional y ruedas suaves. La mayoría de estas tablas se construyen a partir
-                        de moldes regulares de tablas cortas y son capaces de patinar en una variedad de terrenos,
-                        incluidos parques, pero también pueden cruzar un paseo marítimo.
-                    </p>
-                    <!-- aqui si es necesario -->
-                    <a href="#">leer mas</a>
-                    <!-- aqui no es necesario -->
-                </div>
-
-                <div class="image">
-                    <img class="logo-one" src="./assets/imgs/01.png" alt="">
-                    <!--
-                        El atributo alt funciona para un texto cuando no cargue la imagen, 
-                        POR FAVOR AGREGUELA SIEMPRE QUE PUEDA ES BUENA PRACTICA
-                    -->
-                </div>
-            </section>
-
-            <!-- <section class="carving">
-                <div class="carving__card">
-                    <img class="logo-two" src="./assets/imgs/02.png" alt="logo-two">
-                    <span>02</span>
-                    <p>
-                        Si le gustan las tablas que mantienen bien su línea en los giros y no se deslizan mucho, esté
-                        atento
-                        a esta designación.
-                        Eso no significa que no se deslizarán en absoluto, sino que, por lo general, están configurados
-                        con
-                        ruedas con bordes
-                        que se agarran mejor mientras mantienen la velocidad. Todos nuestros modelos completos con ejes
-                        Gullwing Sidewinder II
-                        se consideran tablas de Carving, pero este estilo de conducción tampoco es exclusivo de ellos.
-                    </p>
-                    <a href="#">leer mas</a>
-                </div>
-
-            </section>
-
-            <div class="dowhill">
-                <div class="dowhill__card">
-                    <span>03</span>
-                    <h1>DOWNHILL</h1>
-                    <p>
-                        Las tablas con la designación Downhill están diseñadas para bajar por grandes colinas o pasos de
-                        montaña. Esto no
-                        significa que tenga una licencia automática para cargar por estas colinas, sino que la tabla
-                        puede
-                        manejarlo si tiene la
-                        capacidad. Las tablas de descenso suelen tener moldes más complejos, construcciones únicas y
-                        hardware y componentes de
-                        primera calidad. Siempre patine dentro de sus propias capacidades y use un casco.
-                    </p>
-                    <img class="logo-three" src="./assets/imgs/03.png" alt="logo-three">
-                    <a href="#">leer mas</a>
-                </div>
-            </div> -->
         </main>
     </div>
 
     <footer>
         <div class="content">
-            <!-- ESPACIO NO REQUERIDO -->
             <div class="content__sector">
                 <img class="logo" src="./assets/imgs/Sector.png" alt="logo-footer">
                 <span>Copyright & copy 2020. Sector Nine</span>
@@ -197,24 +147,23 @@
 
             <div class="content__services">
                 <h2>SERVICIO AL CLIENTE</h2>
-                <!-- ESPACIO REQUERIDO -->
                 <ul>
                     <li>
                         <a href="#">Contacto</a>
                     </li>
-                    <!-- ESPACIO REQUERIDO -->
+
                     <li>
                         <a href="#">Preguntas frecuentes</a>
                     </li>
-                    <!-- ESPACIO REQUERIDO -->
+
                     <li>
                         <a href="#">Distribuidores</a>
-                        <!-- ESPACIO REQUERIDO -->
+
                     </li>
                     <li>
                         <a href="#">Política de privacidad</a>
                     </li>
-                    <!-- ESPACIO REQUERIDO -->
+
                     <li>
                         <a href="#">Devoluciones</a>
                     </li>
@@ -223,16 +172,16 @@
 
             <div class="about">
                 <h2>ACERCA DE</h2>
-                <!-- ESPACIO REQUERIDO -->
+
                 <ul>
                     <li>
                         <a href="#">La Bola 9</a>
                     </li>
-                    <!-- ESPACIO REQUERIDO -->
+
                     <li>
                         <a href="#">Completos certificados</a>
                     </li>
-                    <!-- ESPACIO REQUERIDO -->
+
                     <li>
                         <a href="#">Garantía</a>
                     </li>

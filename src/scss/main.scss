@@ -2,22 +2,24 @@
 @import"variables";
 @import"mixins";
 @import"utils";
-// @import"fonts"; SI NO SE USA SE ELIMNA LA LINEA
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body {
-    // ESPACIO ENTRE LINEAS INNECESARIO
     font-family: $font-primary;
-    background-color: #0B1D26;
+    background: #0B1D26;
+
 }
 
 .contenedor-principal {
-    // ESPACIO ENTRE LINEAS INNECESARIO
     background: url(../assets/imgs/MG-hero.png);
-    background-size: cover;
+    background: cover;
 
     .banner {
+
+
+        margin-bottom: 706px;
+
         header nav {
             display: flex;
             justify-content: space-between;
@@ -92,127 +94,198 @@ body {
     }
 
     main {
-        background: linear-gradient(180deg,
-                rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
-        // background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%); // EN UNA LINEA Y CON ESPACIOS SE LEE MEJOR
 
-        span {
-            font-family: $font-primary;
-            font-weight: 700;
-            font-size: 240px;
-            color: white;
-            opacity: 0.1;
-        }
+        background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
 
-        h1, p {
+        h2,
+        p {
             margin-bottom: 27px;
         }
 
-        h1 {
-            // ESPACIO ENTRE LINEAS INNECESARIO
+        h2 {
             font-family: $font-primary;
             color: whitesmoke;
             font-size: 64px;
             font-weight: 600;
             line-height: 96px;
-            // ESPACIO ENTRE LINEAS INNECESARIO
         }
 
         p {
-            // ESPACIO ENTRE LINEAS INNECESARIO
             align-self: center;
             font-family: $font-primary;
             color: whitesmoke;
             font-size: 18px;
             line-height: 32px;
-            position: relative;
+            font-weight: 400;
+
         }
 
         a {
             color: $yellow;
             font-family: $font-primary;
             text-decoration: none;
+
         }
 
-        .cruiser {
-            // ESPACIO ENTRE LINEAS INNECESARIO
-            &__card {
+        .container {
+
+
+            .card {
+
                 display: flex;
 
-                .logo-one {
-                    width: 566px;
-                    height: 720px;
-                    // ESPACIO ENTRE LINEAS INNECESARIO
-                }
-            }
-        }
 
-        .carving {
-            // ESPACIO ENTRE LINEAS INNECESARIO
-            display: flex;
-
-            &__card {
-                // ESPACIO ENTRE LINEAS INNECESARIO Y SI ES EL UNICO BLOQUE DE CSS PARA QUE NECESITA ANIDAR?
-                .logo-two {
-                    // ESPACIO ENTRE LINEAS INNECESARIO
-                    width: 566px;
-                    height: 720px;
-                    // ESPACIO ENTRE LINEAS INNECESARIO
-                }
-            }
-        }
-
-        // este es un ejemplo no para que lo use primero lealo entiendalo y luego hagalo por su cuenta
-        .section { // ESTE SELECTOR ES DE CLASE ES SOLO PARA NO AFECTAR LAS OTRAS Y DEBERIA CAMBIARSE POR UN SELECTOR DE ETIQUETA 
-            display: flex;
-            @extend .container;
-
-            .content {
-                padding: 0 75px 0 150px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-                h1 {
-                    position: relative;
-                }
-
-                h1::before {
-                    content: "01";
-                    font-family: $font-primary;
+                &__title {
+                    height: 76px;
+                    width: 555px;
+                    margin-top: 153px;
                     position: absolute;
-                    font-weight: bold;
+
+                }
+
+                h2::before {
+                    content: "01";
+                    width: 150px;
+                    display: block;
                     font-size: 240px;
-                    color: white;
+                    font-weight: 700;
+                    line-height: 30px;
                     opacity: 0.1;
-                    top: -33%;
-                    left: -16%;
+                    position: relative;
+                    right: 176px;
+                }
+
+                p {
+                    margin-top: 134px;
+                }
+
+                a {
+                    position: relative;
+                    align-self: flex-end;
+                    right: 545px;
+                }
+
+                &__img {
+
+                    width: 566px;
+                    height: 720px;
                 }
             }
 
-            .image {
-                width: 566px;
-                height: 720px;
+
+            .carving {
+                display: flex;
+                margin-top: 200px;
+
+                &__img {
+                    width: 566px;
+                    height: 720px;
+                    position: relative;
+                    left: -150px;
+                }
+
+                &__card {
+                    display: inline-block;
+                    align-self: center;
+                    margin-left: 154px ;
+                    
+
+                    &__title {
+                        height: 76px;
+                        width: 555px;
+                    }
+
+                    p{
+                        width:632px ;
+                    }
+                    h2::before {
+                        content: "02";
+                        width: 150px;
+                        display: block;
+                        font-size: 240px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        opacity: 0.1;
+                        position: relative;
+                        right: 176px;
+                    }
+                }
+
+            }
+
+            .downhill{
+                margin-top: 200px; 
+
+                .card {
+                
+                    display: flex;
+                
+                
+                    &__title {
+                        height: 76px;
+                        width: 555px;
+                        margin-top: 153px;
+                        position: absolute;
+                
+                    }
+                
+                    h2::before {
+                        content: "03";
+                        width: 150px;
+                        display: block;
+                        font-size: 240px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        opacity: 0.1;
+                        position: relative;
+                        right: 176px;
+                    }
+                
+                    p {
+                        margin-top: 134px;
+                    }
+                
+                    a {
+                        position: relative;
+                        align-self: flex-end;
+                        right: 545px;
+                    }
+                
+                    &__img {
+                
+                        width: 566px;
+                        height: 720px;
+                    }
+                }    
+
             }
         }
+
     }
 }
 
 footer {
-    // ESPACIO ENTRE LINEAS INNECESARIO Y SI ES EL UNICO BLOQUE DE CSS PARA QUE NECESITA ANIDAR?
     .content {
+
         margin-top: 200px;
         display: flex;
         justify-content: space-evenly;
-        // ESPACIO ENTRE LINEAS INNECESARIO
+        margin-bottom: 120px;
+        
+        span {
+            font-family: $font-primary;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            color: whitesmoke;
+        }
 
         h2 {
             font-family: $font-primary;
             font-size: 18px;
             line-height: 32px;
-            color: white;
+            color: $yellow;
             margin-bottom: 20px;
-            // ESPACIO ENTRE LINEAS INNECESARIO
         }
 
         ul {
@@ -228,7 +301,6 @@ footer {
         }
 
         &__sector {
-            // ESPACIO ENTRE LINEAS INNECESARIO
             display: flex;
             flex-direction: column;
 
@@ -237,15 +309,6 @@ footer {
                 height: 39px;
                 margin-bottom: 25px;
             }
-
-            span {
-                font-family: $font-primary;
-                font-size: 18px;
-                line-height: 32px;
-                color: white;
-            }
         }
     }
-    // ESPACIO ENTRE LINEAS INNECESARIO
-    // ESPACIO ENTRE LINEAS INNECESARIO
 }

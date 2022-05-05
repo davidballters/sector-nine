@@ -132,33 +132,33 @@ table {
   border-spacing: 0;
 }
 
-.container, .contenedor-principal main .section {
+.container {
   padding-right: 1rem;
   padding-left: 1rem;
 }
-.container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+.container:not(.is-fluid) {
   margin: 0 auto;
 }
 @media only screen and (min-width: 600px) {
-  .container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+  .container:not(.is-fluid) {
     width: 100%;
     max-width: 570px;
   }
 }
 @media only screen and (min-width: 900px) {
-  .container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+  .container:not(.is-fluid) {
     width: 100%;
     max-width: 860px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+  .container:not(.is-fluid) {
     width: 100%;
     max-width: 1150px;
   }
 }
 @media only screen and (min-width: 1800px) {
-  .container:not(.is-fluid), .contenedor-principal main .section:not(.is-fluid) {
+  .container:not(.is-fluid) {
     width: 100%;
     max-width: 1400px;
   }
@@ -244,12 +244,15 @@ table {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #0B1D26;
+  background: #0B1D26;
 }
 
 .contenedor-principal {
   background: url(../assets/imgs/MG-hero.png);
-  background-size: cover;
+  background: cover;
+}
+.contenedor-principal .banner {
+  margin-bottom: 706px;
 }
 .contenedor-principal .banner header nav {
   display: flex;
@@ -314,17 +317,11 @@ body {
 .contenedor-principal main {
   background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
 }
-.contenedor-principal main span {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 240px;
-  color: white;
-  opacity: 0.1;
-}
-.contenedor-principal main h1, .contenedor-principal main p {
+.contenedor-principal main h2,
+.contenedor-principal main p {
   margin-bottom: 27px;
 }
-.contenedor-principal main h1 {
+.contenedor-principal main h2 {
   font-family: "Poppins", sans-serif;
   color: whitesmoke;
   font-size: 64px;
@@ -337,51 +334,110 @@ body {
   color: whitesmoke;
   font-size: 18px;
   line-height: 32px;
-  position: relative;
+  font-weight: 400;
 }
 .contenedor-principal main a {
   color: #FDD130;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
-.contenedor-principal main .cruiser__card {
+.contenedor-principal main .container .card {
   display: flex;
 }
-.contenedor-principal main .cruiser__card .logo-one {
-  width: 566px;
-  height: 720px;
-}
-.contenedor-principal main .carving {
-  display: flex;
-}
-.contenedor-principal main .carving__card .logo-two {
-  width: 566px;
-  height: 720px;
-}
-.contenedor-principal main .section {
-  display: flex;
-}
-.contenedor-principal main .section .content {
-  padding: 0 75px 0 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.contenedor-principal main .section .content h1 {
-  position: relative;
-}
-.contenedor-principal main .section .content h1::before {
-  content: "01";
-  font-family: "Poppins", sans-serif;
+.contenedor-principal main .container .card__title {
+  height: 76px;
+  width: 555px;
+  margin-top: 153px;
   position: absolute;
-  font-weight: bold;
-  font-size: 240px;
-  color: white;
-  opacity: 0.1;
-  top: -33%;
-  left: -16%;
 }
-.contenedor-principal main .section .image {
+.contenedor-principal main .container .card h2::before {
+  content: "01";
+  width: 150px;
+  display: block;
+  font-size: 240px;
+  font-weight: 700;
+  line-height: 30px;
+  opacity: 0.1;
+  position: relative;
+  right: 176px;
+}
+.contenedor-principal main .container .card p {
+  margin-top: 134px;
+}
+.contenedor-principal main .container .card a {
+  position: relative;
+  align-self: flex-end;
+  right: 545px;
+}
+.contenedor-principal main .container .card__img {
+  width: 566px;
+  height: 720px;
+}
+.contenedor-principal main .container .carving {
+  display: flex;
+  margin-top: 200px;
+}
+.contenedor-principal main .container .carving__img {
+  width: 566px;
+  height: 720px;
+  position: relative;
+  left: -150px;
+}
+.contenedor-principal main .container .carving__card {
+  display: inline-block;
+  align-self: center;
+  margin-left: 154px;
+}
+.contenedor-principal main .container .carving__card__title {
+  height: 76px;
+  width: 555px;
+}
+.contenedor-principal main .container .carving__card p {
+  width: 632px;
+}
+.contenedor-principal main .container .carving__card h2::before {
+  content: "02";
+  width: 150px;
+  display: block;
+  font-size: 240px;
+  font-weight: 700;
+  line-height: 30px;
+  opacity: 0.1;
+  position: relative;
+  right: 176px;
+}
+.contenedor-principal main .container .downhill {
+  margin-top: 200px;
+}
+.contenedor-principal main .container .downhill .card {
+  display: flex;
+}
+.contenedor-principal main .container .downhill .card__title {
+  height: 76px;
+  width: 555px;
+  margin-top: 153px;
+  position: absolute;
+}
+.contenedor-principal main .container .downhill .card h2::before {
+  content: "03";
+  width: 150px;
+  display: block;
+  font-size: 240px;
+  font-weight: 700;
+  line-height: 30px;
+  opacity: 0.1;
+  position: relative;
+  right: 176px;
+}
+.contenedor-principal main .container .downhill .card p {
+  margin-top: 134px;
+}
+.contenedor-principal main .container .downhill .card a {
+  position: relative;
+  align-self: flex-end;
+  right: 545px;
+}
+.contenedor-principal main .container .downhill .card__img {
   width: 566px;
   height: 720px;
 }
@@ -390,12 +446,20 @@ footer .content {
   margin-top: 200px;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 120px;
+}
+footer .content span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: whitesmoke;
 }
 footer .content h2 {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 32px;
-  color: white;
+  color: #FDD130;
   margin-bottom: 20px;
 }
 footer .content ul li > a {
@@ -414,12 +478,6 @@ footer .content__sector .logo {
   width: 102px;
   height: 39px;
   margin-bottom: 25px;
-}
-footer .content__sector span {
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  line-height: 32px;
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
