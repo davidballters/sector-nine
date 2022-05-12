@@ -244,15 +244,15 @@ table {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #0B1D26;
+  width: 100%;
+  height: 60vh;
+  background: url(../assets/imgs/MG-hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.contenedor-principal {
-  background: url(../assets/imgs/MG-hero.png);
-  background: cover;
-}
 .contenedor-principal .banner {
-  margin-bottom: 706px;
+  margin-bottom: 120px;
 }
 .contenedor-principal .banner header nav {
   display: flex;
@@ -282,7 +282,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 60px;
-  margin-bottom: 466px;
+  margin-bottom: 180px;
 }
 .contenedor-principal .banner__half .icon {
   margin-top: 102px;
@@ -296,7 +296,7 @@ body {
   line-height: 70px;
   margin-left: 64px;
   font-family: "Poppins", sans-serif;
-  font-size: 80px;
+  font-size: 66px;
 }
 .contenedor-principal .banner__half .slider {
   margin-top: 125px;
@@ -314,21 +314,24 @@ body {
   font-weight: 700;
   text-decoration: none;
 }
-.contenedor-principal main {
-  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+.contenedor-principal .main {
+  width: 100%;
+  margin: 0 auto;
+  background: #0B1D26;
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 12.38%);
 }
-.contenedor-principal main h2,
-.contenedor-principal main p {
+.contenedor-principal .main h2,
+.contenedor-principal .main p {
   margin-bottom: 27px;
 }
-.contenedor-principal main h2 {
+.contenedor-principal .main h2 {
   font-family: "Poppins", sans-serif;
   color: whitesmoke;
-  font-size: 64px;
+  font-size: 54px;
   font-weight: 600;
   line-height: 96px;
 }
-.contenedor-principal main p {
+.contenedor-principal .main p {
   align-self: center;
   font-family: "Poppins", sans-serif;
   color: whitesmoke;
@@ -336,133 +339,123 @@ body {
   line-height: 32px;
   font-weight: 400;
 }
-.contenedor-principal main a {
+.contenedor-principal .main a {
   color: #FDD130;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
-.contenedor-principal main .container .card {
+.contenedor-principal .main .cruiser {
   display: flex;
+  margin-top: 360px;
+  margin-left: 20px;
 }
-.contenedor-principal main .container .card__title {
-  height: 76px;
-  width: 555px;
-  margin-top: 153px;
-  position: absolute;
+.contenedor-principal .main .cruiser__box {
+  margin-left: 70px;
 }
-.contenedor-principal main .container .card h2::before {
+.contenedor-principal .main .cruiser__box .title {
+  margin-left: 50px;
+  margin-top: 170px;
+}
+.contenedor-principal .main .cruiser__box h2::before {
   content: "01";
-  width: 150px;
-  display: block;
-  font-size: 240px;
-  font-weight: 700;
-  line-height: 30px;
+  font-size: 150px;
+  line-height: 165px;
+  font-family: "Poppins", sans-serif;
   opacity: 0.1;
-  position: relative;
-  right: 176px;
-}
-.contenedor-principal main .container .card p {
-  margin-top: 134px;
-}
-.contenedor-principal main .container .card a {
-  position: relative;
-  align-self: flex-end;
-  right: 545px;
-}
-.contenedor-principal main .container .card__img {
-  width: 566px;
-  height: 720px;
-}
-.contenedor-principal main .container .carving {
-  display: flex;
-  margin-top: 200px;
-}
-.contenedor-principal main .container .carving__img {
-  width: 566px;
-  height: 720px;
-  position: relative;
-  left: -150px;
-}
-.contenedor-principal main .container .carving__card {
-  display: inline-block;
-  align-self: center;
-  margin-left: 154px;
-}
-.contenedor-principal main .container .carving__card__title {
-  height: 76px;
-  width: 555px;
-}
-.contenedor-principal main .container .carving__card p {
-  width: 632px;
-}
-.contenedor-principal main .container .carving__card h2::before {
-  content: "02";
-  width: 150px;
-  display: block;
-  font-size: 240px;
-  font-weight: 700;
-  line-height: 30px;
-  opacity: 0.1;
-  position: relative;
-  right: 176px;
-}
-.contenedor-principal main .container .downhill {
-  margin-top: 200px;
-}
-.contenedor-principal main .container .downhill .card {
-  display: flex;
-}
-.contenedor-principal main .container .downhill .card__title {
-  height: 76px;
-  width: 555px;
-  margin-top: 153px;
   position: absolute;
+  margin: -100px;
+  margin-top: -69px;
 }
-.contenedor-principal main .container .downhill .card h2::before {
-  content: "03";
-  width: 150px;
-  display: block;
-  font-size: 240px;
-  font-weight: 700;
-  line-height: 30px;
-  opacity: 0.1;
-  position: relative;
-  right: 176px;
+.contenedor-principal .main .cruiser__box p {
+  align-self: center;
+  margin: 49px;
+  margin-top: 10px;
 }
-.contenedor-principal main .container .downhill .card p {
-  margin-top: 134px;
+.contenedor-principal .main .cruiser__box a {
+  margin-left: 50px;
 }
-.contenedor-principal main .container .downhill .card a {
-  position: relative;
-  align-self: flex-end;
-  right: 545px;
+.contenedor-principal .main .cruiser__post {
+  margin-right: 80px;
 }
-.contenedor-principal main .container .downhill .card__img {
-  width: 566px;
-  height: 720px;
-}
-
-footer .content {
+.contenedor-principal .main .carving {
   margin-top: 200px;
+  display: flex;
+}
+.contenedor-principal .main .carving__post {
+  width: 333px;
+  margin-left: 30px;
+}
+.contenedor-principal .main .carving__box {
+  margin-left: 325px;
+}
+.contenedor-principal .main .carving__box .title {
+  margin-top: 110px;
+}
+.contenedor-principal .main .carving__box h2::before {
+  content: "02";
+  font-size: 150px;
+  line-height: 165px;
+  font-family: "Poppins", sans-serif;
+  opacity: 0.1;
+  position: absolute;
+  margin: -100px;
+  margin-top: -69px;
+}
+.contenedor-principal .main .carving__box p {
+  padding-inline-end: 80px;
+}
+.contenedor-principal .main .downhill {
+  display: flex;
+  margin-top: 200px;
+}
+.contenedor-principal .main .downhill__box {
+  align-self: center;
+  margin-left: 60px;
+}
+.contenedor-principal .main .downhill__box .title {
+  margin: 3px;
+}
+.contenedor-principal .main .downhill__box h2::before {
+  content: "03";
+  font-size: 150px;
+  line-height: 165px;
+  font-family: "Poppins", sans-serif;
+  opacity: 0.1;
+  position: absolute;
+  margin: -90px;
+  margin-top: -69px;
+  margin-left: -60px;
+}
+.contenedor-principal .main .downhill__box p {
+  padding-right: 40px;
+}
+.contenedor-principal .main .downhill__post {
+  margin-right: 70px;
+}
+.contenedor-principal footer {
+  background: #0B1D26;
+}
+.contenedor-principal footer .content {
+  background: #0B1D26;
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 120px;
+  margin-bottom: 200px;
 }
-footer .content span {
+.contenedor-principal footer .content span {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 32px;
   color: whitesmoke;
 }
-footer .content h2 {
+.contenedor-principal footer .content h2 {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 32px;
   color: #FDD130;
   margin-bottom: 20px;
 }
-footer .content ul li > a {
+.contenedor-principal footer .content ul li > a {
   font-family: "Poppins", sans-serif;
   color: white;
   font-size: 18px;
@@ -470,11 +463,11 @@ footer .content ul li > a {
   list-style: none;
   text-decoration: none;
 }
-footer .content__sector {
+.contenedor-principal footer .content__sector {
   display: flex;
   flex-direction: column;
 }
-footer .content__sector .logo {
+.contenedor-principal footer .content__sector .logo {
   width: 102px;
   height: 39px;
   margin-bottom: 25px;
