@@ -407,6 +407,7 @@ body {
 .contenedor-principal .main .downhill {
   display: flex;
   margin-top: 200px;
+  margin-bottom: 200px;
 }
 .contenedor-principal .main .downhill__box {
   align-self: center;
@@ -432,30 +433,26 @@ body {
 .contenedor-principal .main .downhill__post {
   margin-right: 70px;
 }
-.contenedor-principal footer {
-  background: #0B1D26;
-}
-.contenedor-principal footer .content {
-  background: #0B1D26;
+.contenedor-principal .main footer .content {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 200px;
 }
-.contenedor-principal footer .content span {
+.contenedor-principal .main footer .content span {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 32px;
   color: whitesmoke;
 }
-.contenedor-principal footer .content h2 {
+.contenedor-principal .main footer .content h2 {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 32px;
   color: #FDD130;
   margin-bottom: 20px;
 }
-.contenedor-principal footer .content ul li > a {
+.contenedor-principal .main footer .content ul li > a {
   font-family: "Poppins", sans-serif;
   color: white;
   font-size: 18px;
@@ -463,11 +460,11 @@ body {
   list-style: none;
   text-decoration: none;
 }
-.contenedor-principal footer .content__sector {
+.contenedor-principal .main footer .content__sector {
   display: flex;
   flex-direction: column;
 }
-.contenedor-principal footer .content__sector .logo {
+.contenedor-principal .main footer .content__sector .logo {
   width: 102px;
   height: 39px;
   margin-bottom: 25px;
