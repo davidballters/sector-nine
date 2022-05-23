@@ -318,7 +318,7 @@ body {
   width: 100%;
   margin: 0 auto;
   background: #0B1D26;
-  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 12.38%);
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 6%);
 }
 .contenedor-principal .main h2,
 .contenedor-principal .main p {
@@ -327,17 +327,14 @@ body {
 .contenedor-principal .main h2 {
   font-family: "Poppins", sans-serif;
   color: whitesmoke;
-  font-size: 54px;
-  font-weight: 600;
-  line-height: 96px;
+  font-size: 40px;
+  line-height: 18px;
 }
 .contenedor-principal .main p {
-  align-self: center;
   font-family: "Poppins", sans-serif;
   color: whitesmoke;
-  font-size: 18px;
-  line-height: 32px;
-  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
 }
 .contenedor-principal .main a {
   color: #FDD130;
@@ -346,97 +343,111 @@ body {
 }
 .contenedor-principal .main .cruiser {
   display: flex;
-  margin-top: 360px;
-  margin-left: 20px;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 364px;
 }
 .contenedor-principal .main .cruiser__box {
-  margin-left: 70px;
+  width: 500px;
+  align-self: center;
+  margin-right: 40px;
 }
 .contenedor-principal .main .cruiser__box .title {
-  margin-left: 50px;
-  margin-top: 170px;
+  margin-top: 71px;
 }
 .contenedor-principal .main .cruiser__box h2::before {
   content: "01";
-  font-size: 150px;
-  line-height: 165px;
+  font-size: 174px;
+  line-height: 162px;
   font-family: "Poppins", sans-serif;
-  opacity: 0.1;
+  font-weight: 1000;
+  opacity: 25%;
   position: absolute;
-  margin: -100px;
-  margin-top: -69px;
+  margin: -106px;
+  margin-top: -121px;
 }
 .contenedor-principal .main .cruiser__box p {
-  align-self: center;
-  margin: 49px;
-  margin-top: 10px;
+  padding: 37px;
 }
 .contenedor-principal .main .cruiser__box a {
-  margin-left: 50px;
+  margin-left: 40px;
 }
-.contenedor-principal .main .cruiser__post {
-  margin-right: 80px;
+.contenedor-principal .main .cruiser img {
+  width: 380px;
+  height: 585px;
 }
 .contenedor-principal .main .carving {
   margin-top: 200px;
   display: flex;
+  justify-content: center;
 }
-.contenedor-principal .main .carving__post {
-  width: 333px;
-  margin-left: 30px;
+.contenedor-principal .main .carving img {
+  width: 380px;
+  height: 585px;
 }
 .contenedor-principal .main .carving__box {
-  margin-left: 325px;
+  width: 500px;
+  margin-left: 139px;
+  align-self: center;
 }
 .contenedor-principal .main .carving__box .title {
   margin-top: 110px;
+  margin-left: 39px;
 }
 .contenedor-principal .main .carving__box h2::before {
   content: "02";
-  font-size: 150px;
-  line-height: 165px;
+  font-size: 174px;
+  line-height: 162px;
   font-family: "Poppins", sans-serif;
-  opacity: 0.1;
+  font-weight: 1000;
+  opacity: 25%;
   position: absolute;
-  margin: -100px;
-  margin-top: -69px;
+  margin: -106px;
+  margin-top: -121px;
 }
 .contenedor-principal .main .carving__box p {
-  padding-inline-end: 80px;
+  margin-left: 44px;
+  padding: 10px;
+}
+.contenedor-principal .main .carving__box a {
+  margin-left: 54px;
 }
 .contenedor-principal .main .downhill {
-  display: flex;
   margin-top: 200px;
-  margin-bottom: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .contenedor-principal .main .downhill__box {
+  width: 500px;
   align-self: center;
-  margin-left: 60px;
 }
 .contenedor-principal .main .downhill__box .title {
-  margin: 3px;
+  margin-top: 30px;
 }
 .contenedor-principal .main .downhill__box h2::before {
   content: "03";
-  font-size: 150px;
-  line-height: 165px;
+  font-size: 174px;
+  line-height: 162px;
   font-family: "Poppins", sans-serif;
-  opacity: 0.1;
+  font-weight: 1000;
+  opacity: 25%;
   position: absolute;
-  margin: -90px;
-  margin-top: -69px;
-  margin-left: -60px;
+  margin: -106px;
+  margin-top: -121px;
 }
 .contenedor-principal .main .downhill__box p {
-  padding-right: 40px;
+  margin-right: 72px;
 }
-.contenedor-principal .main .downhill__post {
-  margin-right: 70px;
+.contenedor-principal .main .downhill img {
+  width: 380px;
+  height: 585px;
 }
 .contenedor-principal .main footer .content {
   display: flex;
+  height: 400px;
   justify-content: space-evenly;
-  margin-bottom: 200px;
+  margin-top: 200px;
 }
 .contenedor-principal .main footer .content span {
   font-family: "Poppins", sans-serif;
