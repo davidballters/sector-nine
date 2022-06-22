@@ -6,7 +6,7 @@ body {
     font-family: $font-primary;
     width: 100vw;
     height: 100vh;
-    background: url(../assets/imgs/MG-hero.png);
+    background:url(../assets/imgs/MG-hero.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -110,6 +110,7 @@ body {
                 width: 500px;
                 align-self: center;
                 margin-left: 80px;
+
                 h2,
                 p {
                     margin-bottom: 27px;
