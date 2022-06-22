@@ -1,8 +1,5 @@
 @import"reset";
 @import"variables";
-@import"mixins";
-@import"utils";
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body {
@@ -10,265 +7,252 @@ body {
     width: 100vw;
     height: 100vh;
     background: url(../assets/imgs/MG-hero.png);
-   
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-body {
-    @include breakpoint($md) {
-        background: url(../assets/imgs/MGmovile.png);
-        background-repeat: no-repeat;
-    }
-}
-
-.banner{
-
-    @include breakpoint($md){
-
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.cruiser{
-
-    @include breakpoint($sm){
-
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-
-
-.contenedor-principal{
+.contenedor-principal {
 
     display: block;
-    
-        .banner {
-    
-            margin-bottom: 120px;
-    
-            header nav {
+
+    .banner {
+
+        margin-bottom: 120px;
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 64px;
+            margin-left: 59px;
+            margin-right: 59px;
+
+            .logo {
+                width: 102px;
+                height: 39px;
+            }
+
+            ul {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 64px;
-                margin-left: 59px;
-                margin-right: 59px;
-    
+
+                li>a {
+                    text-decoration: none;
+                    color: $black;
+                    margin: 24px;
+                    font-family: $font-primary;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+            }
+        }
+
+        &__half {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 60px;
+            margin-bottom: 180px;
+
+            .icon {
+                margin-top: 102px;
+
+                a {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+
+            h1 {
+                margin-top: 139px;
+                line-height: 70px;
+                margin-left: 64px;
+                font-family: $font-primary;
+                font-size: 66px;
+            }
+
+            .slider {
+                margin-top: 125px;
+
+                ul {
+                    text-align: right;
+
+                    li {
+                        margin-bottom: 40px;
+
+                        a {
+                            color: $black;
+                            font-family: $font-primary;
+                            line-height: 27px;
+                            font-weight: 700;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+        margin: 0 auto;
+        background: $darkBlue;
+        background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 6%);
+
+
+        .cruiser,
+        .carving,
+        .downhill {
+            display: flex;
+            justify-content: space-evenly;
+            padding-right: 30px;
+
+            .box {
+                width: 500px;
+                align-self: center;
+                margin-left: 80px;
+                h2,
+                p {
+                    margin-bottom: 27px;
+                }
+
+                h2 {
+                    margin-top: 40px;
+                    font-family: $font-primary;
+                    color: whitesmoke;
+                    font-size: 50px;
+                    line-height: 15px;
+                }
+
+                p {
+                    font-family: $font-primary;
+                    font-weight: 400;
+                    color: whitesmoke;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+
+                a {
+                    color: $yellow;
+                    font-family: $font-primary;
+                    text-decoration: none;
+                }
+            }
+
+            img {
+                width: 380px;
+                height: 585px;
+            }
+        }
+    }
+
+    .cruiser {
+        margin-top: 364px;
+
+        .box {
+
+            &::before {
+                content: "01";
+                font-size: 174px;
+                line-height: 244px;
+                font-family: $font-primary;
+                font-weight: 1000;
+                color: white;
+                opacity: 25%;
+                position: absolute;
+                margin: -106px;
+                margin-top: -121px;
+            }
+        }
+    }
+
+    .carving {
+        margin-top: 200px;
+
+        .box {
+
+            h2::before {
+                content: "02";
+                font-size: 185px;
+                line-height: 166px;
+                font-family: $font-primary;
+                font-weight: 1000;
+                color: whitesmoke;
+                opacity: 31%;
+                position: absolute;
+                margin: -106px;
+                margin-top: -121px;
+            }
+        }
+    }
+
+
+    .downhill {
+        margin-top: 200px;
+
+        .box {
+
+            h2::before {
+                content: "03";
+                font-size: 185px;
+                line-height: 166px;
+                font-family: $font-primary;
+                font-weight: 1000;
+                color: whitesmoke;
+                opacity: 31%;
+                position: absolute;
+                margin: -106px;
+                margin-top: -121px;
+            }
+        }
+    }
+
+
+    footer {
+        .content {
+            display: flex;
+            height: 400px;
+            justify-content: space-evenly;
+            margin-top: 200px;
+
+            span {
+                font-family: $font-primary;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 32px;
+                color: whitesmoke;
+            }
+
+            h2 {
+                font-family: $font-primary;
+                font-size: 18px;
+                line-height: 32px;
+                color: $yellow;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                li>a {
+
+                    font-family: $font-primary;
+                    color: white;
+                    font-size: 18px;
+                    line-height: 32px;
+                    list-style: none;
+                    text-decoration: none;
+                }
+            }
+
+            &__sector {
+                display: flex;
+                flex-direction: column;
+
                 .logo {
                     width: 102px;
                     height: 39px;
-                }
-    
-                ul {
-                    display: flex;
-    
-                    li>a {
-                        text-decoration: none;
-                        color: $black;
-                        margin: 24px;
-                        font-family: $font-primary;
-                        font-weight: 700;
-                        font-size: 18px;
-                        line-height: 27px;
-                    }
-                }
-            }
-    
-            &__half {
-                display: flex;
-                justify-content: space-between;
-                padding: 0 60px;
-                margin-bottom: 180px;
-    
-                .icon {
-                    margin-top: 102px;
-    
-                    a {
-                        display: block;
-                        margin-bottom: 20px;
-                    }
-                }
-    
-                h1 {
-                    margin-top: 139px;
-                    line-height: 70px;
-                    margin-left: 64px;
-                    font-family: $font-primary;
-                    font-size: 66px;
-                }
-    
-                .slider {
-                    margin-top: 125px;
-    
-                    ul {
-                        text-align: right;
-    
-                        li {
-                            margin-bottom: 40px;
-    
-                            a {
-                                color: $black;
-                                font-family: $font-primary;
-                                line-height: 27px;
-                                font-weight: 700;
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    
-        .main {
-            width: 100%;
-            margin: 0 auto;
-            background: $darkBlue;
-            background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 6%);
-    
-    
-            .cruiser,
-            .carving,
-            .downhill {
-                display: flex;
-                justify-content: center;
-    
-                .box {
-                    width: 500px;
-                    align-self: center;
-    
-                    h2,
-                    p {
-                        margin-bottom: 27px;
-                    }
-    
-                    h2 {
-                        font-family: $font-primary;
-                        color: whitesmoke;
-                        font-size: 40px;
-                        line-height: 18px;
-    
-                        &::before {
-                            content: '';
-                            font-size: 174px;
-                            line-height: 162px;
-                            font-family: $font-primary;
-                            font-weight: 1000;
-                            opacity: 25%;
-                            position: absolute;
-                            margin: -106px;
-                            margin-top: -121px;
-                        }
-                    }
-    
-                    p {
-                        font-family: $font-primary;
-                        color: whitesmoke;
-                        font-size: 12px;
-                        line-height: 25px;
-                    }
-    
-                    a {
-                        color: $yellow;
-                        font-family: $font-primary;
-                        text-decoration: none;
-                    }
-                }
-    
-                img {
-                    width: 380px;
-                    height: 585px;
-                }
-            }
-        }
-    
-        .cruiser {
-            margin-top: 364px;
-    
-            .box {
-                margin-right: 40px;
-    
-                h2::before {
-                    content: "01";
-                }
-            }
-        }
-    
-        .carving {
-            margin-top: 200px;
-    
-            .box {
-                padding-left: 100px;
-    
-                h2::before {
-                    content: "02";
-                }
-            }
-        }
-    
-        .downhill {
-            margin-top: 200px;
-    
-            .box {
-                margin-right: 72px;
-    
-                h2::before {
-                    content: "03";
-                }
-            }
-        }
-    
-    
-        footer {
-            .content {
-                display: flex;
-                height: 400px;
-                justify-content: space-evenly;
-                margin-top: 200px;
-    
-                span {
-                    font-family: $font-primary;
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 32px;
-                    color: whitesmoke;
-                }
-    
-                h2 {
-                    font-family: $font-primary;
-                    font-size: 18px;
-                    line-height: 32px;
-                    color: $yellow;
-                    margin-bottom: 20px;
-                }
-    
-                ul {
-                    li>a {
-    
-                        font-family: $font-primary;
-                        color: white;
-                        font-size: 18px;
-                        line-height: 32px;
-                        list-style: none;
-                        text-decoration: none;
-                    }
-                }
-    
-                &__sector {
-                    display: flex;
-                    flex-direction: column;
-    
-                    .logo {
-                        width: 102px;
-                        height: 39px;
-                        margin-bottom: 25px;
-                    }
+                    margin-bottom: 25px;
                 }
             }
         }
     }
-    
 
+}
