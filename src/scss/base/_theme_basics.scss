@@ -1,0 +1,80 @@
+body {
+  max-width: 100%;
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 8.5%, #0B1D26 21%), url('/src/assets/imgs/MG.png');
+  background-attachment: scroll;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mq (md) {
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 15.5%, #0B1D26 28%),
+    url("/src/assets/imgs/MG.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include mq (lg) {
+    max-width: 100%;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 14.5%, #0B1D26 28%), url('/src/assets/imgs/MG-hero.png');
+    background-attachment: scroll;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @include mq (xl) {
+    max-width: 100%;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 26.5%, #0B1D26 31%), url('/src/assets/imgs/MG-hero.png');
+    background-attachment: scroll;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include mq (xl) {
+    max-width: 1400px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+hr {
+  position: absolute;
+  top: 150px;
+  width: 53px;
+  height: 2px;
+  border: none;
+  background-color: $yellow;
+
+  @media screen and(min-width:425px) {
+    top: 205px;
+    width: 76px;
+  }
+
+  @media screen and (min-width:768px) {
+    top: 370px;
+    width: 100px;
+    height: 3px;
+  }
+
+  @media screen and (min-width:1024px) {
+    display: none;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+}
