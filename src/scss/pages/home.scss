@@ -91,10 +91,52 @@
       &__half {
         display: none;
 
-        &__icon {
-          @include mq(lg) {
-            display: block;
+        @include mq (lg){
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 176px;
+          left: 15px;
+
+          ul {
+            text-align: center;
+
+            li {
+              margin-bottom: 20px;
+
+              a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                padding:10px;
+                box-sizing: border-box;
+                border-radius: 100%;
+                background-color: transparent;
+                font-family: $font;
+                font-size: 11px;
+                line-height: 27px;
+                font-weight: 700;
+                text-decoration: none;
+                transition: background-color 200ms ease-in-out;
+              }
+            }
           }
+          
+          &.bg-dark {
+
+            ul {  
+              li {
+                a { 
+                  background-color: $white;
+                  transition-timing-function: ease-in;
+                }
+              }
+            }
+          }
+        }
+
+        @include mq (xl){
+          left: 122px;
         }
       }
 
@@ -104,14 +146,13 @@
         font-weight: 500;
         text-align: start;
         line-height: 40px;
-        background-color: red($color: #000000);
 
         @include mq(sm) {
           font-size: 2rem;
         }
 
         @include mq(md) {
-          margin-bottom: 89rem;
+          // margin-bottom: 89rem;
           font-size: 50px;
           font-size: 54px;
           line-height: 55px;
@@ -142,14 +183,15 @@
           position: fixed;
           right: 55px;
           top: 100px;
-          transition: background-color 0.4 ease-in-out;
+          transition: background-color 400ms ease-in-out;
+          transition-delay: 0s;
 
           ul {
             text-align: center;
 
             &::before {
-              position: absolute;
               content: "";
+              position: absolute;
               width: 2px;
               height: 180px;
               left: 55px;
@@ -166,31 +208,41 @@
                 line-height: 27px;
                 font-weight: 700;
                 text-decoration: none;
-                cursor: pointer;
-                transition: all 0.5s;
+                transition: all 0.3s ease-in-out;
+              }
 
-                &:hover {
-                  color: $yellow;
+              &:not(:first-child) {
+                a {
+                  &:hover {
+                    padding:10px;
+                    background-color: $yellow;
+                    border-radius: 100%;
+                  }
+                }
+
+                &.is-active {
+                  a {
+                    background-color: $yellow;
+                    border-radius: 100%;
+                    padding:10px;
+                  }
                 }
               }
             }
           }
-        }
 
-        &.bg-dark {
+          &.bg-dark {
 
-          ul {
-            &::before {
-              background-color: $white;
-            }
+            ul {
+              &::before {
+                background-color: $white;
+              }
+  
+              li {
 
-            li > a {
-              color: $white;
-
-              &:hover {
-                background-color: $yellow;
-                border-radius: 100%;
-                padding:10px;
+                a { 
+                  color: $white;
+                }
               }
             }
           }
@@ -430,6 +482,7 @@
 
 footer {
   .content {
+
     @include mq(md) {
       display: flex;
       height: 400px;

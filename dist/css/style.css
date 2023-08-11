@@ -155,14 +155,17 @@ body {
   @media (min-width: 768px) {
     body {
       background: linear-gradient(180deg, rgba(11, 29, 38, 0) 15.5%, #0b1d26 28%), url("/src/assets/imgs/MG.png");
-      background-size: contain; } }
+      background-size: cover;
+      background-repeat: no-repeat; } }
   @media (min-width: 1024px) {
     body {
-      background: linear-gradient(180deg, rgba(11, 29, 38, 0) 14.5%, #0b1d26 28%), url("/src/assets/imgs/MG-hero.png");
-      background-size: contain; } }
+      background: linear-gradient(180deg, rgba(11, 29, 38, 0) 14.5%, #0b1d26 19%), url("/src/assets/imgs/MG-hero.png");
+      background-size: contain;
+      background-repeat: no-repeat; } }
   @media (min-width: 1200px) {
     body {
       background: linear-gradient(180deg, rgba(11, 29, 38, 0) 26.5%, #0b1d26 31%), url("/src/assets/imgs/MG-hero.png");
+      background-repeat: no-repeat;
       background-size: contain; } }
 
 img {
@@ -174,6 +177,107 @@ img {
   margin: 0 auto;
   padding-right: 30px;
   padding-left: 30px; }
+
+.banner__gallery {
+  text-align: center; }
+  @media (min-width: 1024px) {
+    .banner__gallery {
+      width: 100%; } }
+  .banner__gallery .title-gallery {
+    margin-bottom: 50px; }
+    .banner__gallery .title-gallery h3 {
+      margin-bottom: 50px;
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      text-transform: uppercase;
+      line-height: 30px;
+      color: #FFFFFF; }
+  .banner__gallery .promo {
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin-bottom: 75px; }
+    .banner__gallery .promo img {
+      overflow: inherit;
+      border: solid color red; }
+    .banner__gallery .promo h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      color: #FFFFFF;
+      position: absolute;
+      top: 72%;
+      left: 37%;
+      transform: translate(-50%, -50%);
+      text-align: end; }
+      @media (min-width: 768px) {
+        .banner__gallery .promo h2 {
+          left: 46%;
+          bottom: 130px;
+          font-size: 35px; } }
+
+.btn {
+  display: inline-block;
+  padding: 10px 12px;
+  width: 130px;
+  height: 35px;
+  border-radius: 13px;
+  color: #FFFFFF;
+  background: #FDD130;
+  font-size: 12px;
+  border: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  box-shadow: -1px -3px 22px -8px #fdd130; }
+  .btn:hover {
+    background-position: left bottom;
+    color: #e42517; }
+  .btn__outline {
+    background-color: #FFFFFF;
+    color: #e42517;
+    box-shadow: none; }
+  @media (min-width: 768px) {
+    .btn {
+      font-size: 18px;
+      padding: 10px 28px;
+      border-radius: 13px; } }
+  @media (min-width: 1024px) {
+    .btn {
+      font-size: 16px; } }
+
+form {
+  display: flex;
+  margin-bottom: 45px;
+  font-family: "Poppins", sans-serif; }
+  @media (min-width: 768px) {
+    form {
+      text-align: initial; } }
+  form input,
+  form textarea {
+    padding: 5px;
+    width: 80%;
+    color: #FFFFFF;
+    outline: none; }
+  form input[type="submit"] {
+    width: 100px;
+    padding: 3px;
+    margin-top: 0.6rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    transform: translate(2.2%);
+    background-color: #FDD130; }
+    form input[type="submit"]:hover {
+      background-color: #f5f5f5;
+      color: #e42517; }
+  form fieldset {
+    color: #FDD130; }
+    @media (min-width: 768px) {
+      form fieldset {
+        padding-top: 10px; } }
+    form fieldset legend {
+      font-size: 16px;
+      line-height: 32px; }
+    form fieldset .form-control label {
+      padding-bottom: 10px; }
 
 .container .header {
   margin-bottom: 125px;
@@ -243,21 +347,47 @@ img {
 .container .content .banner__half {
   display: none; }
   @media (min-width: 1024px) {
-    .container .content .banner__half__icon {
-      display: block; } }
+    .container .content .banner__half {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 176px;
+      left: 15px; }
+      .container .content .banner__half ul {
+        text-align: center; }
+        .container .content .banner__half ul li {
+          margin-bottom: 20px; }
+          .container .content .banner__half ul li a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 100%;
+            background-color: transparent;
+            font-family: "Poppins", sans-serif;
+            font-size: 11px;
+            line-height: 27px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 200ms ease-in-out; }
+      .container .content .banner__half.bg-dark ul li a {
+        background-color: #FFFFFF;
+        transition-timing-function: ease-in; } }
+  @media (min-width: 1200px) {
+    .container .content .banner__half {
+      left: 122px; } }
 .container .content .banner__title-principal {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 500;
   text-align: start;
-  line-height: 40px;
-  background-color: 0; }
+  line-height: 40px; }
   @media (min-width: 425px) {
     .container .content .banner__title-principal {
       font-size: 2rem; } }
   @media (min-width: 768px) {
     .container .content .banner__title-principal {
-      margin-bottom: 89rem;
       font-size: 50px;
       font-size: 54px;
       line-height: 55px;
@@ -283,12 +413,13 @@ img {
       position: fixed;
       right: 55px;
       top: 100px;
-      transition: background-color 0.4 ease-in-out; }
+      transition: background-color 400ms ease-in-out;
+      transition-delay: 0s; }
       .container .content .banner__slider ul {
         text-align: center; }
         .container .content .banner__slider ul::before {
-          position: absolute;
           content: "";
+          position: absolute;
           width: 2px;
           height: 180px;
           left: 55px;
@@ -302,18 +433,19 @@ img {
             line-height: 27px;
             font-weight: 700;
             text-decoration: none;
-            cursor: pointer;
-            transition: all 0.5s; }
-            .container .content .banner__slider ul li a:hover {
-              color: #FDD130; } }
-  .container .content .banner__slider.bg-dark ul::before {
-    background-color: #FFFFFF; }
-  .container .content .banner__slider.bg-dark ul li > a {
-    color: #FFFFFF; }
-    .container .content .banner__slider.bg-dark ul li > a:hover {
-      background-color: #FDD130;
-      border-radius: 100%;
-      padding: 10px; }
+            transition: all 0.3s ease-in-out; }
+          .container .content .banner__slider ul li:not(:first-child) a:hover {
+            padding: 10px;
+            background-color: #FDD130;
+            border-radius: 100%; }
+          .container .content .banner__slider ul li:not(:first-child).is-active a {
+            background-color: #FDD130;
+            border-radius: 100%;
+            padding: 10px; }
+      .container .content .banner__slider.bg-dark ul::before {
+        background-color: #FFFFFF; }
+      .container .content .banner__slider.bg-dark ul li a {
+        color: #FFFFFF; } }
 @media (min-width: 1024px) {
   .container .content .cruiser .box,
   .container .content .carving .box,
@@ -569,5 +701,276 @@ footer .service {
   margin-bottom: 64px; }
 footer .about {
   padding-bottom: 90px; }
+
+.container {
+  overflow: hidden; }
+  .container .tablas {
+    margin-bottom: 160px; }
+  .container .hero-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    margin-bottom: 50px; }
+    .container .hero-video video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      opacity: 0.7; }
+  .container .content .banner {
+    margin-bottom: 50px;
+    overflow: hidden; }
+    .container .content .banner .swiper {
+      width: 80%;
+      margin-bottom: 100px; }
+    .container .content .banner .swiperCards {
+      width: 300px;
+      height: auto;
+      margin-bottom: 100px;
+      padding-bottom: 50px; }
+      @media (min-width: 768px) {
+        .container .content .banner .swiperCards {
+          width: 430px; } }
+      @media (min-width: 1024px) {
+        .container .content .banner .swiperCards {
+          width: 100%; } }
+      @media (min-width: 1024px) {
+        .container .content .banner .swiperCards .swiper-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); } }
+      .container .content .banner .swiperCards .swiper-slide {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px; }
+        @media (min-width: 1024px) {
+          .container .content .banner .swiperCards .swiper-slide {
+            margin-bottom: 100px;
+            margin-left: 1%; } }
+        @media (min-width: 1200px) {
+          .container .content .banner .swiperCards .swiper-slide {
+            margin-left: 15%; } }
+        .container .content .banner .swiperCards .swiper-slide img {
+          width: 145px;
+          height: 315px; }
+          @media (min-width: 768px) {
+            .container .content .banner .swiperCards .swiper-slide img {
+              width: 200px;
+              height: 500px; } }
+          @media (min-width: 1024px) {
+            .container .content .banner .swiperCards .swiper-slide img {
+              width: 220px;
+              height: 300px; } }
+        .container .content .banner .swiperCards .swiper-slide .content-slide {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center; }
+          @media (min-width: 768px) {
+            .container .content .banner .swiperCards .swiper-slide .content-slide {
+              justify-content: space-evenly; } }
+          @media (min-width: 1024px) {
+            .container .content .banner .swiperCards .swiper-slide .content-slide {
+              justify-content: flex-start;
+              gap: 15px; } }
+          .container .content .banner .swiperCards .swiper-slide .content-slide h2 {
+            margin-bottom: 15px;
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
+            color: #FFFFFF; }
+          .container .content .banner .swiperCards .swiper-slide .content-slide P {
+            padding: 10px;
+            margin-bottom: 30px;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            color: #FFFFFF; }
+          .container .content .banner .swiperCards .swiper-slide .content-slide .price {
+            margin-bottom: 25px;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            color: #e42517; }
+            .container .content .banner .swiperCards .swiper-slide .content-slide .price span {
+              position: relative;
+              font-family: "Poppins", sans-serif;
+              font-size: 30px;
+              color: #e42517; }
+              .container .content .banner .swiperCards .swiper-slide .content-slide .price span::before {
+                content: "$";
+                position: absolute;
+                top: 0;
+                left: -11px;
+                font-size: 14px;
+                color: #e42517; }
+          .container .content .banner .swiperCards .swiper-slide .content-slide .btn {
+            padding: 0;
+            margin-bottom: 30px;
+            width: 110px; }
+            @media (min-width: 1024px) {
+              .container .content .banner .swiperCards .swiper-slide .content-slide .btn {
+                width: 165px; } }
+        .container .content .banner .swiperCards .swiper-slide .swiper-pagination-bullet {
+          background: #f5f5f5; }
+    .container .content .banner .swiperCards2 {
+      padding-bottom: 50px; }
+      @media (min-width: 768px) {
+        .container .content .banner .swiperCards2 {
+          width: 430px; } }
+      @media (min-width: 1024px) {
+        .container .content .banner .swiperCards2 {
+          padding-top: 90px;
+          width: 100%; } }
+      @media (min-width: 1200px) {
+        .container .content .banner .swiperCards2 {
+          width: 90%; } }
+      .container .content .banner .swiperCards2 .swiper-slide {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px; }
+        @media (min-width: 1024px) {
+          .container .content .banner .swiperCards2 .swiper-slide {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            width: 250px !important;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: all 400ms ease; }
+            .container .content .banner .swiperCards2 .swiper-slide:hover {
+              transform: translateY(-10%);
+              box-shadow: 2px 12px 13px 6px #d9d9d9; }
+            .container .content .banner .swiperCards2 .swiper-slide:hover > .btn {
+              display: block; } }
+        @media (min-width: 1200px) {
+          .container .content .banner .swiperCards2 .swiper-slide {
+            margin-left: 10; } }
+        .container .content .banner .swiperCards2 .swiper-slide img {
+          width: 145px;
+          height: 315px; }
+          @media (min-width: 768px) {
+            .container .content .banner .swiperCards2 .swiper-slide img {
+              width: 200px;
+              height: 500px; } }
+          @media (min-width: 1024px) {
+            .container .content .banner .swiperCards2 .swiper-slide img {
+              width: 220px;
+              height: 300px; } }
+        .container .content .banner .swiperCards2 .swiper-slide .content-slide {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center; }
+          @media (min-width: 768px) {
+            .container .content .banner .swiperCards2 .swiper-slide .content-slide {
+              justify-content: space-evenly; } }
+          @media (min-width: 1024px) {
+            .container .content .banner .swiperCards2 .swiper-slide .content-slide {
+              justify-content: flex-start;
+              gap: 15px; } }
+          .container .content .banner .swiperCards2 .swiper-slide .content-slide h2 {
+            margin-bottom: 15px;
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
+            color: #FFFFFF; }
+          .container .content .banner .swiperCards2 .swiper-slide .content-slide P {
+            padding: 10px;
+            margin-bottom: 30px;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            color: #FFFFFF; }
+          .container .content .banner .swiperCards2 .swiper-slide .content-slide .price {
+            margin-bottom: 25px;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            color: #e42517; }
+            .container .content .banner .swiperCards2 .swiper-slide .content-slide .price span {
+              position: relative;
+              font-family: "Poppins", sans-serif;
+              font-size: 30px;
+              color: #e42517; }
+              .container .content .banner .swiperCards2 .swiper-slide .content-slide .price span::before {
+                content: "$";
+                position: absolute;
+                top: 0;
+                left: -11px;
+                font-size: 14px;
+                color: #e42517; }
+          .container .content .banner .swiperCards2 .swiper-slide .content-slide .btn {
+            padding: 0;
+            margin-bottom: 30px;
+            width: 110px; }
+            @media (min-width: 1024px) {
+              .container .content .banner .swiperCards2 .swiper-slide .content-slide .btn {
+                width: 165px; } }
+        .container .content .banner .swiperCards2 .swiper-slide .swiper-pagination-bullet {
+          background: #f5f5f5; }
+
+.container .content {
+  position: relative;
+  height: 100%; }
+  .container .content .banner__llantas .swiper {
+    width: 250px;
+    height: 320px; }
+    @media (min-width: 768px) {
+      .container .content .banner__llantas .swiper {
+        width: 385px;
+        height: 375px; } }
+  .container .content .banner__llantas .swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .container .content .banner__llantas img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5%; }
+    @media (min-width: 768px) {
+      .container .content .banner__llantas img {
+        width: 342px;
+        height: 375px; } }
+  .container .content .banner__llantas .description {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: font 128ms ease-in, letter-spacing 128ms ease-in; }
+  .container .content .banner__llantas .swiper-slide:hover .description {
+    color: green;
+    font-size: 39px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 0px; }
+  .container .content .banner__llantas2 .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0; }
+  .container .content .banner__llantas2 .mySwiper2 {
+    height: 80%;
+    width: 100%; }
+  .container .content .banner__llantas2 .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0; }
+  .container .content .banner__llantas2 .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4; }
+  .container .content .banner__llantas2 .mySwiper .swiper-slide-thumb-active {
+    opacity: 1; }
+  .container .content .banner__llantas2 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */

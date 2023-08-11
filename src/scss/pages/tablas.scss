@@ -1,0 +1,289 @@
+.container {
+
+  overflow: hidden;
+
+  .tablas {
+    margin-bottom: 160px;
+  }
+
+  .hero-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    margin-bottom: 50px;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      opacity: 0.7;
+    }
+  }
+
+  .content {
+    .banner {
+      margin-bottom: 50px;
+      overflow: hidden;
+
+
+      .swiper {
+        width: 80%;
+        margin-bottom: 100px;
+      }
+
+      .swiperCards {
+        width: 300px;
+        height: auto;
+        margin-bottom: 100px;
+        padding-bottom: 50px;
+
+        @include mq(md) {
+          width: 430px;
+        }
+
+        @include mq(lg) {
+          width: 100%;
+        }
+
+        .swiper-wrapper {
+          @include mq(lg) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        .swiper-slide {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 20px;
+
+          @include mq(lg) {
+            margin-bottom: 100px;
+            margin-left: 1%;
+          }
+
+          @include mq(xl) {
+            margin-left: 15%;
+          }
+
+          img {
+            width: 145px;
+            height: 315px;
+
+            @include mq(md) {
+              width: 200px;
+              height: 500px;
+            }
+
+            @include mq(lg) {
+              width: 220px;
+              height: 300px;
+            }
+          }
+
+          .content-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            @include mq(md) {
+              justify-content: space-evenly;
+            }
+
+            @include mq(lg) {
+              justify-content: flex-start;
+              gap: 15px;
+            }
+
+            h2 {
+              margin-bottom: 15px;
+              font-family: $font;
+              font-size: 25px;
+              color: $white;
+            }
+
+            P {
+              padding: 10px;
+              margin-bottom: 30px;
+              font-family: $font;
+              font-size: 16px;
+              color: $white;
+            }
+
+            .price {
+              margin-bottom: 25px;
+              font-family: $font;
+              font-size: 16px;
+              color: $red;
+
+              span {
+                position: relative;
+                font-family: $font;
+                font-size: 30px;
+                color: $red;
+
+                &::before {
+                  content: "$";
+                  position: absolute;
+                  top: 0;
+                  left: -11px;
+                  font-size: 14px;
+                  color: $red;
+                }
+              }
+            }
+
+            .btn {
+              padding: 0;
+              margin-bottom: 30px;
+              width: 110px;
+
+              @include mq(lg) {
+                width: 165px;
+              }
+            }
+          }
+
+          .swiper-pagination-bullet {
+            background: $ligth-white;
+          }
+        }
+      }
+
+      .swiperCards2 {
+        padding-bottom: 50px;
+
+        @include mq(md) {
+          width: 430px;
+        }
+
+        @include mq(lg) {
+          padding-top: 90px;
+          width: 100%;
+        }
+
+        @include mq(xl) {
+          width: 90%;
+        }
+
+        .swiper-slide {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 20px;
+
+          @include mq(lg) {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            width: 250px !important;
+            margin-left: 15px;
+
+            cursor: pointer;
+            transition: all 400ms ease;
+
+            &:hover {
+              transform: translateY(-10%);
+              box-shadow: 2px 12px 13px 6px rgba(217, 217, 217, 1);
+            }
+
+            &:hover>.btn {
+              display: block;
+            }
+          }
+
+          @include mq(xl) {
+            margin-left: 10;
+          }
+
+          img {
+            width: 145px;
+            height: 315px;
+
+            @include mq(md) {
+              width: 200px;
+              height: 500px;
+            }
+
+            @include mq(lg) {
+              width: 220px;
+              height: 300px;
+            }
+          }
+
+          .content-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            @include mq(md) {
+              justify-content: space-evenly;
+            }
+
+            @include mq(lg) {
+              justify-content: flex-start;
+              gap: 15px;
+            }
+
+            h2 {
+              margin-bottom: 15px;
+              font-family: $font;
+              font-size: 25px;
+              color: $white;
+            }
+
+            P {
+              padding: 10px;
+              margin-bottom: 30px;
+              font-family: $font;
+              font-size: 16px;
+              color: $white;
+            }
+
+            .price {
+              margin-bottom: 25px;
+              font-family: $font;
+              font-size: 16px;
+              color: $red;
+
+              span {
+                position: relative;
+                font-family: $font;
+                font-size: 30px;
+                color: $red;
+
+                &::before {
+                  content: "$";
+                  position: absolute;
+                  top: 0;
+                  left: -11px;
+                  font-size: 14px;
+                  color: $red;
+                }
+              }
+            }
+
+            .btn {
+              padding: 0;
+              margin-bottom: 30px;
+              width: 110px;
+
+              @include mq(lg) {
+                width: 165px;
+              }
+            }
+          }
+
+          .swiper-pagination-bullet {
+            background: $ligth-white;
+          }
+        }
+      }
+    }
+  }
+}

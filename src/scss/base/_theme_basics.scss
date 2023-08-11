@@ -1,22 +1,25 @@
 body {
   max-width: 100%;
-  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 8.5%, #0b1d26 21%),url("/src/assets/imgs/MG.png");
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 8.5%, #0b1d26 21%), url("/src/assets/imgs/MG.png");
   background-attachment: scroll;
   background-size: contain;
   background-repeat: no-repeat;
 
   @include mq(md) {
-    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 15.5%, #0b1d26 28%),url("/src/assets/imgs/MG.png");
-    background-size: contain;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 15.5%, #0b1d26 28%), url("/src/assets/imgs/MG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   @include mq(lg) {
-    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 14.5%, #0b1d26 28%),url("/src/assets/imgs/MG-hero.png");
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 14.5%, #0b1d26 19%), url("/src/assets/imgs/MG-hero.png");
     background-size: contain;
+    background-repeat: no-repeat;
   }
 
   @include mq(xl) {
-    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 26.5%, #0b1d26 31%),url("/src/assets/imgs/MG-hero.png");
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 26.5%, #0b1d26 31%), url("/src/assets/imgs/MG-hero.png");
+    background-repeat: no-repeat;
     background-size: contain;
   }
 }
@@ -31,4 +34,143 @@ img {
   margin: 0 auto;
   padding-right: 30px;
   padding-left: 30px;
+}
+
+.banner__gallery {
+  text-align: center;
+
+  @include mq(lg) {
+    width: 100%;
+  }
+
+  .title-gallery {
+    margin-bottom: 50px;
+
+    h3 {
+      margin-bottom: 50px;
+      font-family: $font;
+      font-size: 24px;
+      text-transform: uppercase;
+      line-height: 30px;
+      color: $white;
+    }
+  }
+
+  .promo {
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin-bottom: 75px;
+
+    img {
+      overflow: inherit;
+      border: solid color red;
+    }
+
+    h2 {
+      font-family: $font;
+      font-size: 20px;
+      color: $white;
+      position: absolute;
+      top: 72%;
+      left: 37%;
+      transform: translate(-50%, -50%);
+      text-align: end;
+
+      @include mq(md) {
+        left: 46%;
+        bottom: 130px;
+        font-size: 35px;
+      }
+    }
+  }
+
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 12px;
+  width: 130px;
+  height: 35px;
+  border-radius: 13px;
+  color: $white;
+  background: $yellow;
+  font-size: 12px;
+  border: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  box-shadow: -1px -3px 22px -8px rgba(253, 209, 48, 1);
+
+  &:hover {
+    background-position: left bottom;
+    color: $red;
+  }
+
+  &__outline {
+    background-color: $white;
+    color: $red;
+    box-shadow: none;
+  }
+
+  @include mq(md) {
+    font-size: 18px;
+    padding: 10px 28px;
+    border-radius: 13px;
+  }
+
+  @include mq (lg) {
+    font-size: 16px;
+  }
+}
+
+form {
+  display: flex;
+  margin-bottom: 45px;
+  font-family: $font;
+
+  @include mq (md) {
+    text-align: initial;
+  }
+
+  input,
+  textarea {
+    padding: 5px;
+    width: 80%;
+    color: $white;
+    outline: none;
+  }
+
+  input[type="submit"] {
+    width: 100px;
+    padding: 3px;
+    margin-top: 0.6rem;
+    font-family: $font;
+    font-weight: bold;
+    transform: translate(2.2%);
+    background-color: $yellow;
+
+    &:hover {
+      background-color: $ligth-white;
+      color: $red;
+    }
+  }
+
+  fieldset {
+    color: $yellow;
+
+    @include mq (md) {
+      padding-top: 10px;
+    }
+
+    legend {
+      font-size: 16px;
+      line-height: 32px;
+    }
+
+    .form-control {
+      label {
+        padding-bottom: 10px;
+      }
+    }
+  }
 }

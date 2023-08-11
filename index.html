@@ -17,10 +17,10 @@
       <div class="navigation">
           <ul>
               <li>
-                  <a href="#">tablas</a>
+                  <a href="tablas.html">tablas</a>
               </li>
               <li>
-                  <a href="#">Llantas</a>
+                  <a href="llantas.html">Llantas</a>
               </li>
               <li>
                   <a href="#">Componentes</a>
@@ -31,31 +31,41 @@
     <main class="content" >
       <div class="banner">
         <div class="banner__half">
-          <a href="#" class="banner__half__icon">
-            <img src="/src/assets/icons/icon-instagram.png" alt="instagram">
-          </a>
-          <a href="#" class="banner__half__icon">
-            <img src="/src/assets/icons/incon-twiter.png" alt="twiter">
-          </a>
+          <ul>
+            <li>
+              <a href="#"><img src="/src/assets/icons/icon-instagram.png" alt="instagram"></a>
+            </li>
+
+            <li>
+              <a href="#"><img src="/src/assets/icons/incon-twiter.png" alt="twiter"></a>
+            </li>
+
+            <li>
+              <a href="#"><img src="/src/assets/icons/faceboock.png" alt="faceboock"></a>
+            </li>
+          </ul>
         </div>
         <h1 class="banner__title-principal">
           Si estás buscando <br> escribir tu nombre<br> en la calle, entonces<br> quieres una tabla de<br>Sector Nine.
         </h1>
-        <div class="banner__slider  scroller">
-            <ul>
-                <li>
-                    <a class="inicio" href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a class="inicio_1" href="#cruiser">01</a>
-                </li>
-                <li>
-                    <a class="inicio_2" href="#carving">02</a>
-                </li>
-                <li>
-                    <a class="inicio_3" href="#downhill">03</a>
-                </li>
-            </ul>
+        <div class="banner__slider">
+          <ul>
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#cruiser">01</a>
+            </li>
+
+            <li>
+                <a href="#carving">02</a>
+            </li>
+
+            <li>
+                <a href="#downhill">03</a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -79,7 +89,7 @@
         </div>
       </div>
 
-      <div  id="carving" class="carving">
+      <div id="carving" class="carving">
         <div class="box">
           <img src="/src/assets/imgs/02.png" alt="carving">
           <div class="text">
@@ -124,6 +134,18 @@
           <img class="logo-footer" src="/src/assets/imgs/Sector.png" alt="logo-footer">
           <span>Copyright 2023, Sector Nine</span>
         </div>
+
+        <form action="index.html" method="POST">
+          <fieldset>
+            <legend>SUSCRIBETE</legend>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Introduce tu Email"required/>
+            </div>
+            
+            <input type="submit" value="suscribirme" class="submit-btn" />
+          </fieldset>
+        </form>
 
         <div class="service">
           <h2>SERVICIO AL CLIENTE</h2>
@@ -170,6 +192,7 @@
     </footer>
   </div>
   <script src="dist/js/main.js"></script>
+  <script src="dist/js/home.js"></script>
 </body>
 
 </html>
