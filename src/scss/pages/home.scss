@@ -1,24 +1,22 @@
 .container {
-
   .header {
     margin-bottom: 125px;
     padding-top: 25px;
     text-align: center;
-    z-index: 10 ;
-    
-    @include mq (md) {
+    z-index: 10;
+
+    @include mq(md) {
       margin-bottom: 260px;
     }
 
-    @include mq (lg) {
+    @include mq(lg) {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 0;
     }
 
-    @include mq (xl) {
-      max-width: 1400px;
+    @include mq(xl) {
       margin-bottom: 110px;
     }
 
@@ -27,18 +25,18 @@
       height: 39px;
       margin-bottom: 30px;
 
-      @include mq (sm) {
+      @include mq(sm) {
         width: 115px;
         height: 45px;
       }
 
-      @include mq (md) {
+      @include mq(md) {
         width: 145px;
         height: 45px;
         margin-bottom: 110px;
       }
 
-      @include mq (lg) {
+      @include mq(lg) {
         width: 102px;
         height: 39px;
         margin: 0;
@@ -49,7 +47,7 @@
 
       ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         li > a {
           font-family: $font;
@@ -57,18 +55,19 @@
           font-weight: 700;
           line-height: 24px;
           text-decoration: none;
+          list-style: none;
           color: $black;
-       
-          @include mq (md) {
-            font-size: 30px;
-          }
 
-          @include mq (lg) {
+          @include mq(md) {
+            font-size: 30px;
+          } 
+
+          @include mq(lg) {
             font-size: 12px;
             margin-left: 20px;
           }
 
-          @include mq (xl) {
+          @include mq(xl) {
             font-size: 18px;
             margin-left: 40px;
           }
@@ -77,28 +76,67 @@
     }
   }
 
-  .content { 
-
+  .content {
     .banner {
-
-      @include mq (lg) {
+      @include mq(lg) {
         display: flex;
         justify-content: space-evenly;
         margin-top: 29px;
       }
 
-      @include mq (xl) {
+      @include mq(xl) {
         margin-top: 82px;
       }
 
       &__half {
         display: none;
-        
-        &__icon {
 
-          @include mq (lg) {
-            display: block;
+        @include mq (lg){
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 176px;
+          left: 15px;
+
+          ul {
+            text-align: center;
+
+            li {
+              margin-bottom: 20px;
+
+              a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                padding:10px;
+                box-sizing: border-box;
+                border-radius: 100%;
+                background-color: transparent;
+                font-family: $font;
+                font-size: 11px;
+                line-height: 27px;
+                font-weight: 700;
+                text-decoration: none;
+                transition: background-color 200ms ease-in-out;
+              }
+            }
           }
+          
+          &.bg-dark {
+
+            ul {  
+              li {
+                a { 
+                  background-color: $white;
+                  transition-timing-function: ease-in;
+                }
+              }
+            }
+          }
+        }
+
+        @include mq (xl){
+          left: 122px;
         }
       }
 
@@ -106,23 +144,22 @@
         font-family: $font;
         font-size: 24px;
         font-weight: 500;
-        text-align:start;
+        text-align: start;
         line-height: 40px;
-        background-color: red($color: #000000);
 
-        @include mq (sm) {
+        @include mq(sm) {
           font-size: 2rem;
         }
 
-        @include mq (md) {
-          margin-bottom: 89rem;
+        @include mq(md) {
+          // margin-bottom: 89rem;
           font-size: 50px;
           font-size: 54px;
           line-height: 55px;
           letter-spacing: 6px;
         }
 
-        @include mq (lg) {
+        @include mq(lg) {
           display: flex;
           justify-content: center;
           margin-top: 65px;
@@ -131,32 +168,33 @@
           margin-bottom: 0;
         }
 
-        @include mq (xl) {
-          margin-top: 10px; 
+        @include mq(xl) {
+          margin-top: 10px;
           font-size: 74px;
           line-height: 1;
         }
       }
 
       &__slider {
-        position: relative;
         display: none;
 
-        @include mq (lg) {
+        @include mq(lg) {
           display: block;
           position: fixed;
-          right: 30px;
+          right: 55px;
           top: 100px;
+          transition: background-color 400ms ease-in-out;
+          transition-delay: 0s;
 
           ul {
-            text-align: end;
+            text-align: center;
 
             &::before {
+              content: "";
               position: absolute;
-              content: '';
               width: 2px;
               height: 180px;
-              left: 40px;
+              left: 55px;
               background-color: $black;
             }
 
@@ -170,26 +208,40 @@
                 line-height: 27px;
                 font-weight: 700;
                 text-decoration: none;
-                cursor: pointer;
-                transition: all .5s;
+                transition: all 0.3s ease-in-out;
+              }
 
-                &:hover {
-                  color: white;
+              &:not(:first-child) {
+                a {
+                  &:hover {
+                    padding:10px;
+                    background-color: $yellow;
+                    border-radius: 100%;
+                  }
+                }
+
+                &.is-active {
+                  a {
+                    background-color: $yellow;
+                    border-radius: 100%;
+                    padding:10px;
+                  }
                 }
               }
             }
+          }
 
-            &.scrolling {
-              background-color: $white;
+          &.bg-dark {
 
-              &__slider {
+            ul {
+              &::before {
+                background-color: $white;
+              }
+  
+              li {
 
-                ul { 
-                  li{
-                    a {
-                      color: $white;
-                    }
-                  }
+                a { 
+                  color: $white;
                 }
               }
             }
@@ -201,9 +253,7 @@
     .cruiser,
     .carving,
     .downhill {
-
       .box {
-
         @include mq(lg) {
           display: flex;
           flex-direction: row-reverse;
@@ -219,7 +269,6 @@
         }
 
         .text {
-
           h2 {
             position: relative;
             margin-top: 120px;
@@ -230,7 +279,7 @@
             line-height: 15px;
             color: $ligth-white;
 
-            @include mq (md) {
+            @include mq(md) {
               font-size: 40px;
               font-weight: 600;
             }
@@ -248,19 +297,19 @@
               color: $ligth-white;
               opacity: 25%;
 
-              @include mq (md) {
+              @include mq(md) {
                 font-size: 180px;
                 bottom: 85px;
               }
 
-              @include mq (lg) {
+              @include mq(lg) {
                 font-size: 110px;
                 left: -66px;
                 letter-spacing: 5px;
                 bottom: 25px;
               }
 
-              @include mq (xl) {
+              @include mq(xl) {
                 font-size: 155px;
                 left: -95px;
                 bottom: 43px;
@@ -276,20 +325,20 @@
               height: 2px;
               background: $yellow;
 
-              @include mq (md) {
+              @include mq(md) {
                 width: 150px;
                 height: 4px;
                 bottom: 70px;
               }
 
-              @include mq (lg){
+              @include mq(lg) {
                 width: 36px;
                 height: 1px;
                 bottom: 35px;
                 left: 3px;
               }
 
-              @include mq (xl) {
+              @include mq(xl) {
                 width: 50px;
                 bottom: 50px;
                 left: 0;
@@ -305,17 +354,17 @@
             font-size: 18px;
             line-height: 25px;
 
-            @include mq (md) {
+            @include mq(md) {
               font-size: 25px;
             }
 
-            @include mq (lg) {
+            @include mq(lg) {
               width: 335px;
               font-size: 12px;
               line-height: 18px;
             }
 
-            @include mq (lg) {
+            @include mq(lg) {
               width: 405px;
             }
           }
@@ -328,11 +377,11 @@
             font-family: $font;
             text-decoration: none;
 
-            @include mq (md) {
+            @include mq(md) {
               font-size: 22px;
             }
 
-            @include mq (lg){
+            @include mq(lg) {
               font-size: 14px;
             }
 
@@ -342,7 +391,7 @@
               width: 10px;
               height: 10px;
 
-              @include mq (md) {
+              @include mq(md) {
                 width: 20px;
                 height: 20px;
               }
@@ -355,20 +404,20 @@
           width: 312rem;
           height: auto;
 
-          @include mq (md) {
+          @include mq(md) {
             margin-bottom: 200px;
           }
 
-          @include mq (lg){
+          @include mq(lg) {
             width: 300px;
             height: 492px;
-            margin: 0;            
+            margin: 0;
           }
 
-          @include mq (xl){
+          @include mq(xl) {
             width: 395px;
             height: 600px;
-            margin: 0;            
+            margin: 0;
           }
         }
       }
@@ -378,23 +427,21 @@
       margin-top: 415px;
       margin-bottom: 80px;
 
-      @include mq (sm) {
+      @include mq(sm) {
         margin-top: 700px;
       }
 
-      @include mq (lg) {
+      @include mq(lg) {
         margin-top: 365px;
       }
 
-      @include mq (xl) {
-        margin-top: 445px;
+      @include mq(xl) {
+        margin-top: 525px;
       }
 
       .box {
-
         img {
-
-          @include mq (lg) {
+          @include mq(lg) {
             margin: 0;
           }
         }
@@ -409,9 +456,7 @@
       margin-bottom: 80px;
 
       .box {
-
-        @include mq (lg) {
-
+        @include mq(lg) {
           img {
             order: 1;
           }
@@ -427,7 +472,6 @@
       margin-bottom: 80px;
 
       .box {
-
         h2::before {
           content: "03";
         }
@@ -437,10 +481,9 @@
 }
 
 footer {
-
   .content {
 
-    @include mq (md) {
+    @include mq(md) {
       display: flex;
       height: 400px;
       justify-content: space-evenly;
@@ -453,7 +496,7 @@ footer {
       line-height: 32px;
       color: $ligth-white;
 
-      @include mq (lg) {
+      @include mq(lg) {
         font-weight: 500;
         font-size: 12px;
         line-height: 32px;
@@ -469,7 +512,6 @@ footer {
     }
 
     ul {
-
       li {
         padding-bottom: 16px;
 
@@ -500,7 +542,7 @@ footer {
     margin-bottom: 64px;
   }
 
-  .about{
+  .about {
     padding-bottom: 90px;
   }
 }
