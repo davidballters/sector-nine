@@ -57,12 +57,6 @@ const swiper2 = new Swiper('.swiperCards2', {
       spaceBetween: 20,
       slidesPerView: '3',
     },
-    // 1440: {
-    //   loop: true,
-    //   spaceBetween: 10,
-    //   slidesPerView: '4',
-    // }
-
   }
 });
 

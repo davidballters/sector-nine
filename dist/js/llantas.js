@@ -2,41 +2,31 @@ const swiper = new Swiper(".mySwiperCards", {  //este es otro slider en la misma
   effect: "cards",
   grabCursor: true,
   loop:true,
+
+  breakpoints: {
+    320: {
+      spaceBetween: 25
+    },
+    // when window width is >= 480px
+    480: {
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      spaceBetween: 40
+    },
+    1024: {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 'none',
+      effect: "none",
+    },
+  }
 });
-
-
-// const slider1 = document.querySelector(".mySwiper2 .swiper-container");
-// const slider2Thumbs = document.querySelectorAll(".mySwiper2 .swiper-slide");
-
-// // Crea una instancia del slider principal
-// const Swiper1 = new Swiper(slider1, {
-//   spaceBetween: 10,
-//   loop:true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
-
-// // Crea una instancia del slider de miniaturas
-// const swiper2 = new Swiper(".mySwiper2", {
-//   spaceBetween: 10,
-//   slidesPerView: 4,
-//   loop:true,
-//   freeMode: true,
-//   watchSlidesProgress: true,
-// });
-
-// // Agrega el evento de clic a las miniaturas
-// slider2Thumbs.forEach((thumb, index) => {
-//   thumb.addEventListener("click", () => {
-//     Swiper1.slideTo(index); // Cambia el slide activo del slider principal
-//   });
-// });
 
 var Swiper1 = new Swiper(".mySwiper", {
   spaceBetween: 10,
-  slidesPerView: 4,
+  slidesPerView: 3,
   loop:true,
   freeMode: true,
   watchSlidesProgress: true,
